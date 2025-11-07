@@ -1,0 +1,27 @@
+{
+  "name": "Android Codespace Environment",
+  "image": "mcr.microsoft.com/devcontainers/java:17", 
+  
+  "features": {
+    // Install the Gradle build tool for running ./gradlew commands
+    "ghcr.io/devcontainers/features/gradle:1": {
+      "version": "latest"
+    }
+  },
+  
+  // Command to run once the container is ready
+  "postCreateCommand": "chmod +x gradlew",
+  
+  "remoteUser": "vscode",
+  
+  // Recommendations for VS Code extensions for a good development experience
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "redhat.vscode-xml", // For AndroidManifest and layout files
+        "vscjava.vscode-gradle" // Gradle support
+      ]
+    }
+  }
+}
+
